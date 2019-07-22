@@ -10,11 +10,13 @@ class Product(Base):
     id = Column(Integer, primary_key=True, unique=True, autoincrement=True)
     s_id = Column(Integer, unique=True)
     name = Column(String)
-    tmp = relationships('Tmp', backref='product')
+    # tmp = relationships('Tmp', backref='product')
 
     def __init__(self, **kwargs):
         self.s_id = kwargs.get('id')
         self.name = kwargs.get('name')
+        self.tmp = kwargs.get('tmp')
+
 
 
 class Tmp(Base):

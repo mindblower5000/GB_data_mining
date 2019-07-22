@@ -43,7 +43,6 @@ class Special5ka:
         # COLLECTION.insert_many(self.products)
         session = db_session()
         session.add_all(self.products)
-
         session.commit()
         session.close()
 
