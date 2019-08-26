@@ -13,5 +13,12 @@ class IcoParserItem(scrapy.Item):
     name = scrapy.Field()
     slogan = scrapy.Field()
     description = scrapy.Field()
+    team = scrapy.Field()
+    advisors = scrapy.Field()
 
 
+class PersonItem(scrapy.Item):
+    _id = scrapy.Field()
+    name = scrapy.Field()
+    links = scrapy.Field()
+    source_page_url = scrapy.Field()
